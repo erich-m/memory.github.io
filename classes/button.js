@@ -8,6 +8,7 @@ class Button {
 		this.r = r;
 
 		this.m = margin;
+
 		this.note = note;
 		this.v = volume;
 
@@ -31,6 +32,15 @@ class Button {
 		}
 		
 		rect(this.x,this.y,this.w,this.h,this.r);
+	}
+	update(x,y,w,h,r,margin){
+		this.x = x+margin;
+		this.y = y+margin;
+		this.w = w-(2*margin);
+		this.h = h-(2*margin);
+		this.r = r;
+
+		this.m = margin;
 	}
 	flash(waitTime,flashControl,updateFunction){
 		if(this.buttonStatus){
@@ -100,3 +110,4 @@ class Button {
 		this.v = !this.v;
 	}
 }
+
